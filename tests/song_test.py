@@ -11,5 +11,5 @@ class TestSong(unittest.TestCase):
         self.assertEqual("Isn't it Pythonic?", self.song_1.title)
     
     def test_can_find_song_by_artist(self):
-        self.assertEqual("Alanis Morissette", self.song_1.title)
-        self.assertEqual("Jimi Hendrix", self.song_2.title)
+        self.assertEqual("Alanis Morissette", self.song_1.artist)
+        self.assertEqual("Jimi Hendrix", self.song_2.artist)
