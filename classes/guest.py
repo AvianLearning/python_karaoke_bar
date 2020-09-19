@@ -4,3 +4,6 @@ class Guest:
         self.name = name 
         self.age = age
         self.wallet = wallet
+
+    def pay_entry_fee(self, fee):
+        self.wallet -= fee
