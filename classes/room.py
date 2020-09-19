@@ -10,5 +10,8 @@ class Room:
 
     def check_out_guest(self, guest):
         self.guest_list.remove(guest)
+
+    def add_song_to_song_list(self, song):
+        self.song_list.append(song)
     
     
