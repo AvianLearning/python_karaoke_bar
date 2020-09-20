@@ -31,4 +31,5 @@ class TestKaraokeBar(unittest.TestCase):
         self.assertEqual(52.89, self.guest_2.wallet)   
 
     def test_can_add_drink_to_drinks_list(self):
-        pass
+        self.karaoke_bar.add_drink(self.drink_1)
+        self.assertEqual(1, self.karaoke_bar.count_drinks())
