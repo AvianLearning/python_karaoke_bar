@@ -17,12 +17,9 @@ class KaraokeBar:
         return len(self.drinks_list)
 
     def sell_drink(self, guest, drink):
-        if self.count_drinks == 0:
-            return
-        if self.guest_can_afford_drink(guest, drink):
-            self.drinks_list.remove(drink)
+        if self.count_drinks() > 0 and guest.sufficient_funds(drink):
             guest.buy_drink(drink)
             self.till += drink.price
+        return
 
-    def guest_can_afford_drink(self, guest, drink):
-        return guest.sufficient_funds(drink)
+

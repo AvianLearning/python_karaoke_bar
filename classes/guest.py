@@ -20,5 +20,6 @@ class Guest:
             self.wallet -= drink.price
 
     def sufficient_funds(self, drink):
-        return self.wallet >= drink.price
+        if self.wallet >= drink.price:
+            return True
 

@@ -56,6 +56,13 @@ class TestKaraokeBar(unittest.TestCase):
         self.karaoke_bar.sell_drink(guest_4, self.drink_6)
         self.assertEqual(115.95, self.karaoke_bar.till)
         self.assertEqual(3.39, round(guest_4.wallet, 2))
+    
+    def test_cannot_sell_drink_if_not_stocked(self):
+        guest_6 = Guest("Maisie the Mod", 29.43, "Masses Against The Classes")
+        self.karaoke_bar.sell_drink(guest_6, self.drink_3)
+        self.assertEqual(0, self.karaoke_bar.count_drinks())
+        self.assertEqual(100, self.karaoke_bar.till)
+        self.assertEqual(29.43, guest_6.wallet)
 
         
         
