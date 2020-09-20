@@ -8,5 +8,12 @@ class KaraokeBar:
     def collect_entry_fee(self, guest):
         self.till += self.entry_fee
         guest.pay_entry_fee(self.entry_fee)
+        
+    # def serve(self, guest, drink):
+    #     if self.drinks.count(drink) == 0:
+    #         return
+    #     self.drinks.remove(drink)
+    #     customer.buy_drink(drink)
+    #     self.till += drink.price  
 
 
