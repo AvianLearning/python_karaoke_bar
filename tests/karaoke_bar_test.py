@@ -17,4 +17,10 @@ class TestKaraokeBar(unittest.TestCase):
         self.karaoke_bar.collect_entry_fee(guest_1)
         self.assertEqual(110.00, self.karaoke_bar.till) 
 
+    def test_entry_fee_reduces_guest_wallet(self):
+        self.guest_2 = Guest("Sadie the Screamer", 38, 62.89)
+        self.karaoke_bar.collect_entry_fee(self.guest_2)
+        self.assertEqual(110.00, self.karaoke_bar.till)
+        self.assertEqual(52.89, self.guest_2.wallet)
+
         
