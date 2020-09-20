@@ -16,11 +16,11 @@ class KaraokeBar:
     def count_drinks(self):
         return len(self.drinks_list)
         
-    # def serve(self, guest, drink):
-    #     if self.drinks.count(drink) == 0:
+    # def sell_drink_to_guest(self, guest, drink):
+    #     if self.count_drinks == 0:
     #         return
-    #     self.drinks.remove(drink)
-    #     customer.buy_drink(drink)
+    #     self.drinks_list.remove(drink)
+    #     guest.buy_drink(drink)
     #     self.till += drink.price  
 
 

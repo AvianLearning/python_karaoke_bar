@@ -33,3 +33,9 @@ class TestKaraokeBar(unittest.TestCase):
     def test_can_add_drink_to_drinks_list(self):
         self.karaoke_bar.add_drink(self.drink_1)
         self.assertEqual(1, self.karaoke_bar.count_drinks())
+
+    def test_can_sell_drink_to_customer(self):
+        guest_3 = Guest("Tuneless Wanda", 29.99, "Don't Fear the Repo")
+        self.karaoke_bar.add_drink(self.drink_2)
+        self.karaoke_bar.sell_drink(self.guest_2, self.drink_2)
+        self.assertEqual(104.95, self.karaoke_bar.till)
