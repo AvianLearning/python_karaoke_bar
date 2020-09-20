@@ -7,3 +7,10 @@ class Guest:
 
     def pay_entry_fee(self, entry_fee):
         self.wallet -= entry_fee
+
+    def found_favourite_song(self, song_list):
+        for song in song_list:
+            if song.title == self.favourite_song:
+                return "Choooon!"
+            
+            return "Awww, not the best :-("
