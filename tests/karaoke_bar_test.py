@@ -39,3 +39,10 @@ class TestKaraokeBar(unittest.TestCase):
         self.karaoke_bar.add_drink(self.drink_2)
         self.karaoke_bar.sell_drink(guest_3, self.drink_2)
         self.assertEqual(104.95, self.karaoke_bar.till)
+
+    def test_selling_drink_reduces_guest_wallet(self):
+        guest_5 = Guest("Tone-deaf Tim", 40.00, "Java Talkin'")
+        self.karaoke_bar.add_drink(self.drink_4)
+        self.karaoke_bar.sell_drink(guest_5, self.drink_4)
+        self.assertEqual(105.50, self.karaoke_bar.till)
+        self.assertEqual(34.50, guest_5.wallet)
