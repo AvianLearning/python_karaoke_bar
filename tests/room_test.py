@@ -16,6 +16,8 @@ class TestRoom(unittest.TestCase):
        self.song_3 = Song("Computer Love", "Kraftwerk")
        self.song_4 = Song("Don't Fear the Repo", "Blue Oyster Cult")
        self.song_5 = Song("Go Your Own Way", "Fleetwood MacBook")
+       self.song_6 = Song("MySQL", "The Temptations")
+       self.song_7 = Song("Let's Make Love and Listen to Death from Above", "CSS")
 
     def test_room_has_name(self):
         self.assertEqual("Lizard Lounge", self.room_1.name)
