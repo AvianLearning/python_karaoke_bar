@@ -54,3 +54,7 @@ class TestRoom(unittest.TestCase):
     def test_room_has_guest_favourite_song(self):
         self.room_1.add_song_to_song_list(self.song_1)
         self.assertEqual("Choooon!", self.guest_1.found_favourite_song(self.room_1.song_list))
+
+    def test_room_does_not_have_guest_favourite_song(self):
+        self.room_1.add_song_to_song_list(self.song_5)
+        self.assertEqual("Awww, not the best :-(", self.guest_4.found_favourite_song(self.room_1.song_list))
