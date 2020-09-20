@@ -48,12 +48,13 @@ class TestKaraokeBar(unittest.TestCase):
         self.assertEqual(34.50, guest_5.wallet)
 
     def test_cannot_sell_drink_if_insufficient_funds(self):
-        guest_4 = Guest("Robin the Rocker", 9.34, "Together in Electric Dreams")
+        guest_4 = Guest("Robin the Rocker", 19.34, "Together in Electric Dreams")
+        self.karaoke_bar.collect_entry_fee(guest_4)
         self.karaoke_bar.add_drink(self.drink_5)
         self.karaoke_bar.add_drink(self.drink_6)
         self.karaoke_bar.sell_drink(guest_4, self.drink_5)
         self.karaoke_bar.sell_drink(guest_4, self.drink_6)
-        self.assertEqual(105.95, self.karaoke_bar.till)
+        self.assertEqual(115.95, self.karaoke_bar.till)
         self.assertEqual(3.39, round(guest_4.wallet, 2))
 
         
