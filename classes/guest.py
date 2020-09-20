@@ -16,4 +16,9 @@ class Guest:
             return "Awww, not the best :-("
 
     def buy_drink(self, drink):
-        self.wallet -= drink.price
+        if self.sufficient_funds(drink):
+            self.wallet -= drink.price
+
+    def sufficient_funds(self, drink):
+        return self.wallet >= drink.price
+

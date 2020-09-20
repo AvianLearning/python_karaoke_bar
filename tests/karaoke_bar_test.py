@@ -54,7 +54,7 @@ class TestKaraokeBar(unittest.TestCase):
         self.karaoke_bar.sell_drink(guest_4, self.drink_5)
         self.karaoke_bar.sell_drink(guest_4, self.drink_6)
         self.assertEqual(105.95, self.karaoke_bar.till)
-        self.assertEqual(3.39, guest_4.wallet)
+        self.assertEqual(3.39, round(guest_4.wallet, 2))
 
         
         
