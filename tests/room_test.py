@@ -7,10 +7,10 @@ class TestRoom(unittest.TestCase):
 
     def setUp(self):
        self.room_1 = Room("Lizard Lounge", 3)
-       self.guest_1 = Guest("Colin the Crooner", 62, 34.23)
-       self.guest_2 = Guest("Sadie the Screamer", 38, 62.89)
-       self.guest_3 = Guest("Tuneless Wanda", 22, 29.99)
-       self.guest_4 = Guest("Robin the Rocker", 54, 9.34)
+       self.guest_1 = Guest("Colin the Crooner", 34.23)
+       self.guest_2 = Guest("Sadie the Screamer", 62.89)
+       self.guest_3 = Guest("Tuneless Wanda", 29.99)
+       self.guest_4 = Guest("Robin the Rocker", 9.34)
        self.song_1 = Song("Isn't it Pythonic?", "Alanis Morissette")
        self.song_2 = Song("Little Red Rooster", "Jimi Hendrix")
        self.song_3 = Song("Computer Love", "Kraftwerk")
