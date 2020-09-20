@@ -10,7 +10,6 @@ class Room:
         if len(self.guest_list) < self.capacity:
             self.guest_list.append(guest)
 
-
     def check_out_guest(self, guest):
         self.guest_list.remove(guest)
 

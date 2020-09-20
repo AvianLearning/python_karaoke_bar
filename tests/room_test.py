@@ -7,14 +7,15 @@ class TestRoom(unittest.TestCase):
 
     def setUp(self):
        self.room_1 = Room("Lizard Lounge", 3)
-       self.guest_1 = Guest("Colin the Crooner", 34.23)
-       self.guest_2 = Guest("Sadie the Screamer", 62.89)
-       self.guest_3 = Guest("Tuneless Wanda", 29.99)
-       self.guest_4 = Guest("Robin the Rocker", 9.34)
+       self.guest_1 = Guest("Colin the Crooner", 34.23, "Isn't it Pythonic?")
+       self.guest_2 = Guest("Sadie the Screamer", 62.89, "Computer Love")
+       self.guest_3 = Guest("Tuneless Wanda", 29.99, "Don't Fear the Repo")
+       self.guest_4 = Guest("Robin the Rocker", 9.34, "Together in Electric Dreams")
        self.song_1 = Song("Isn't it Pythonic?", "Alanis Morissette")
        self.song_2 = Song("Little Red Rooster", "Jimi Hendrix")
        self.song_3 = Song("Computer Love", "Kraftwerk")
        self.song_4 = Song("Don't Fear the Repo", "Blue Oyster Cult")
+       self.song_5 = Song("Go Your Own Way", "Fleetwood MacBook")
 
     def test_room_has_name(self):
         self.assertEqual("Lizard Lounge", self.room_1.name)
@@ -49,3 +50,7 @@ class TestRoom(unittest.TestCase):
         self.room_1.check_in_guest(self.guest_3)
         self.room_1.check_in_guest(self.guest_4)
         self.assertEqual(3, len(self.room_1.guest_list))
+
+    def test_room_has_guest_favourite_song(self):
+        self.room_1.add_song_to_song_list(self.song_1)
+        self.assertEqual("Choooon!", self.guest_1.is_favourite_song())

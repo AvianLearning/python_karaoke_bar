@@ -6,7 +6,7 @@ from classes.karaoke_bar import KaraokeBar
 class TestGuest(unittest.TestCase):
 
     def setUp(self):
-        self.guest_1 = Guest("Colin the Crooner", 34.23)
+        self.guest_1 = Guest("Colin the Crooner", 34.23, "Isn't it Pythonic?")
         self.room_1 = Room("Lizard Lounge", 3)
         self.room_2 = Room("Viper's Nest", 10)
         self.room_3 = Room("Clucking Hell", 15)
