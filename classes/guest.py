@@ -14,3 +14,6 @@ class Guest:
                 return "Choooon!"
             
             return "Awww, not the best :-("
+
+    def buy_drink(self, drink):
+        self.wallet -= drink.price
