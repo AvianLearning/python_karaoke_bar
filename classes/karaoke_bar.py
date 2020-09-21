@@ -19,6 +19,7 @@ class KaraokeBar:
     def sell_drink(self, guest, drink):
         if self.count_drinks() > 0 and guest.sufficient_funds(drink):
             guest.buy_drink(drink)
+            self.drinks_list.remove(drink)
             self.till += drink.price
         return
 
